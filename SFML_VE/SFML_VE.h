@@ -1,6 +1,6 @@
 #pragma once
 
-#include <SFML/Graphics/Glyph.hpp>
+#include <SFML/System.hpp>
 
 #define NULLVEC sf::Vector2f(0,0)
 
@@ -12,7 +12,7 @@ public:
 
     sf::Vector2f position, velocity, acceleration;
 
-    void take_step(float delta);
+    void time_step(sf::Time delta_time, int time_multplier = 1);
 };
 
 float operator&(const sf::Vector2f v1, const sf::Vector2f v2);
